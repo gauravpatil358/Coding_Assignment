@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "aac1fc96-04f3-41ce-9786-acb5af416eb0",
+		"name": "Coding-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27664544"
+	},
+	"item": [
+		{
+			"name": "JWT GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJHYXVyYXYiLCJpYXQiOjE3MDQ5NzY1MTMsImV4cCI6MTcwNDk5NDUxM30.mGynOVDoImAa1s_W_MAHknjbngEo7kmk6eLQYB7YzzEFVrqDyxPzxl-J2fmr3AajBorq9etlU5Xd1iCnJEiF-w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Gaurav\",\r\n    \"password\":\"Gaurav\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/home/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"home",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT Current-User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWaXZlayIsImlhdCI6MTcwNDk3NzA2MSwiZXhwIjoxNzA0OTk1MDYxfQ.e0qi5sBk32ybFhxn8M8y5lLr7BRrKaVgPHVb5uAKsrmIM0djtPqc3mzE04FXhiWvHCCjuoJtnHzEj6l2Tsm8vg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/home/current-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"home",
+						"current-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Vivek\",\r\n    \"password\":\"Vivek\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
